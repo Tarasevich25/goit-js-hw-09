@@ -56,14 +56,14 @@ function convertMs(ms) {
 }
 
 function newTimer({ days, hours, minutes, seconds }) {
-  refs.days.textContent = days;
-  refs.hours.textContent = hours;
-  refs.min.textContent = minutes;
-  refs.sec.textContent = seconds;
+  refs.days.textContent = addLeadingZero(days);
+  refs.hours.textContent = addLeadingZero(hours);
+  refs.min.textContent = addLeadingZero(minutes);
+  refs.sec.textContent = addLeadingZero(seconds);
 }
 
 function addLeadingZero(value) {
-  return String(value).padStart(2, '0');
+  return value.toString().padStart(2, '0');
 }
 
 function clickStart() {
