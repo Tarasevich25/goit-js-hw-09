@@ -75,7 +75,7 @@ function clickStart() {
     newTimer(timerOn);
     if (diff < 1000) {
       clearInterval(timerId);
-      refs.buttonartBtn.disabled = false;
+      refs.button.disabled = false;
       refs.inputData.disabled = false;
     }
   }, 1000);
